@@ -1,16 +1,23 @@
+'use strict'
+
 const URL = 'https://bakcend-fecaf-render.onrender.com/contatos'
 
-export async function getContatos (){
+export async function getContatos() {
     const response = await fetch(URL)
-    if(!response.ok) throw new Error('Error ao criar um novo contato!')
+
+    if (!response.ok)
+        throw new Error('Erro ao buscar contatos!')
 
     return response.json()
 }
 
 export async function getContato(id) {
-   const response = await fetch(`${URL}/${id}`)
-   if (!response.ok) throw new Error (`Erro ao listar o contato`)
-    return response.json()    
+    const response = await fetch(`${URL}/${id}`)
+
+    if (!response.ok)
+        throw new Error('Erro ao buscar contato!')
+
+    return response.json()
 }
 
 export async function postContato(contato) {
@@ -18,14 +25,16 @@ export async function postContato(contato) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
-
         },
         body: JSON.stringify(contato)
     }
 
     const response = await fetch(URL, options)
-    if(!response.ok) throw new Error ('Erro ao criar um novo contato')
-        return response.json()
+
+    if (!response.ok)
+        throw new Error('Erro ao criar um novo contato!')
+
+    return response.json()
 }
 
 export async function putContato(id, contato) {
@@ -36,16 +45,25 @@ export async function putContato(id, contato) {
         },
         body: JSON.stringify(contato)
     }
-    const response = await fetch (`${URL}/${id}`, options)
-    if (!response.ok) throw new Error('Erro ao atualizar Contato!')
-        return response.json()
+
+    const response = await fetch(`${URL}/${id}`, options)
+
+    if (!response.ok)
+        throw new Error('Erro ao atualizar contato!')
+
+    return response.json()
 }
 
 export async function deleteContato(id) {
     const options = {
         method: 'DELETE'
     }
-    const response = fetch (`${URL}/${id}`,options)
-    if(!response.ok) throw new Erro('Erro ao deletar o contato!')
-        return true
+
+    const response = await fetch(`${URL}/${id}`, options)
+
+    if (!response.ok)
+        throw new Error('Erro ao deletar contato!')
+
+    return true
 }
+

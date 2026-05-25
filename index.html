@@ -3,53 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="./app.js" defer type="module"></script>
+
     <link rel="stylesheet" href="style.css">
+
     <title>Contatos</title>
 </head>
+
 <body>
-    
-<header>
-    <h1>Contatos</h1>
 
-    <div class="Texto">
-        <input class="input1" type="text" placeholder="Nome">
-        <input class="input2" type="text" placeholder="Celular">
-        <input class="input3" type="text" placeholder="Email">
-        <input class="input4" type="text" placeholder="Foto">
-        <input class="input5" type="text" placeholder="Endereço">
-        <input class="input6" type="text" placeholder="Cidade">
-        <button class="botaoSalvar">Salvar</button>
-    </div>
+    <header>
 
+        <h1>Contatos</h1>
 
-</header>
-    <table>
+        <div class="Texto">
+
+            <input id="nome" class="input1" type="text" placeholder="Nome">
+
+            <input id="celular" class="input2" type="text" placeholder="Celular">
+
+            <input id="email" class="input3" type="text" placeholder="Email">
+
+            <input id="foto" class="input4" type="text" placeholder="Foto">
+
+            <input id="endereco" class="input5" type="text" placeholder="Endereço">
+
+            <input id="cidade" class="input6" type="text" placeholder="Cidade">
+
+            <button id="btsave" class="btsave">
+                Salvar
+            </button>
+
+        </div>
+
+    </header>
+
+    <table border="1">
+
         <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Foto</th>
-            <th>Ação</th>
-          </tr>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Celular</th>
+                <th>Foto</th>
+                <th>Email</th>
+                <th>Endereço</th>
+                <th>Cidade</th>
+                <th>Ação</th>
+
+            </tr>
+
         </thead>
+
         <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><button>DELETE</button><button>UPDATE</button></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><button>DELETE</button><button>UPDATE</button></td>
-          </tr>
+
         </tbody>
-      </table>
-      
-      
+
+    </table>
 
 </body>
 </html>
